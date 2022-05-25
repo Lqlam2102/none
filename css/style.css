@@ -1,0 +1,217 @@
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+@keyframes image-spin {
+    from {
+        opacity: 60%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+  @keyframes move_avatar {
+    0% {
+        transform: translate(0px, 0%);
+    }
+    50%{
+        transform: translate(0px, 5%);
+    }
+    100% {
+        transform: translate(0px, 0%);
+    }
+}
+@keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(1.1, 1.1);
+    }
+  }
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: -70%;
+    max-height: 160px;
+    margin: auto;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+
+
+  .avatar {
+	width: 300px;
+	height: 300px;
+	box-sizing: border-box;
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.2);
+
+
+}
+
+.info-avatar {
+    position: absolute;
+    top: -35px;
+    text-align: center;
+    animation: move_avatar 3s linear infinite;
+}
+
+.avatar:hover {
+    animation: move_avatar 5s linear infinite;
+}
+
+/*  */
+
+  
+  .image-course {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle-course {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .container-image:hover .image-course {
+    opacity: 0.3;
+  }
+  
+  .container-image:hover .middle-course {
+    opacity: 1;
+  }
+  
+  .text-image-course {
+    color: #27273c;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+.animation-wave-div {
+    background-color: #27273c;
+    min-height: 700px;
+}
+
+.input-group input[type=text]{
+    background-color: transparent;
+    padding: 6px 10px;
+    width: 40%;
+    border: none;
+    float: right;
+    font-size: 13px;
+    color: white;
+    margin-top: 4px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    outline: none;
+}
+.input-group .input-group-btn button {
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    margin-top:5px
+}
+.input-group input[type=text]:focus {
+    width: 100%;
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.info-web{
+    padding: 20px;
+}
+
+@media only screen and ( max-width: 767px ) {
+    .waveWrapper {
+        top: -60%;
+    }
+
+}
+
+@media only screen and ( min-width: 768px ) and ( max-width: 991px ) {
+
+}
+
+@media only screen and ( min-width: 992px ) and ( max-width: 1199px ) {
+    div .navbar-collapse li button {
+        display: none;
+    }
+}
